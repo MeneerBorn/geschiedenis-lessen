@@ -19,7 +19,6 @@ const KLASSEN = [
     id: "4havo",
     naam: "4 havo",
     lessen: [
-      { id: "voorbeeldles", titel: "KA 5.1 — De wetenschappelijke revolutie", beschrijving: "Voorbeeldles: de VOC en de Gouden Eeuw", kleur: "var(--tab-b)" },
       { id: "begin-europese-expansie", titel: "KA 2.1 — Het begin van de Europese overzeese expansie", beschrijving: "Goud, God en specerijen: hoe de Portugese ontdekkingsreizen begonnen", kleur: "var(--tab-b)" },
     ],
   },
