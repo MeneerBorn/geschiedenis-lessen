@@ -243,3 +243,49 @@ main{
   font-size: var(--text-body-sm);
   padding: var(--space-8) 0;
 }
+
+.practice-celebration{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in oklch, var(--surface-page) 60%, transparent);
+  z-index: 100;
+  cursor: pointer;
+  opacity: 0;
+  animation: celebration-fade var(--duration-base) var(--ease-standard) forwards;
+}
+.practice-celebration__card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 420px;
+  margin: 0 var(--space-5);
+  padding: var(--space-7) var(--space-6);
+  background: var(--surface-accent);
+  border: 1px solid var(--stroke-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transform: scale(0.9);
+  animation: celebration-pop var(--duration-reveal) var(--ease-out) forwards;
+}
+.practice-celebration__emoji{ font-size: 40px; }
+.practice-celebration__text{
+  font-family: var(--font-sans);
+  font-weight: var(--weight-heavy);
+  font-size: var(--text-h3);
+  color: var(--text-heading);
+  line-height: var(--leading-tight);
+}
+.practice-celebration__hint{
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+@keyframes celebration-fade{ from{ opacity: 0; } to{ opacity: 1; } }
+@keyframes celebration-pop{ from{ transform: scale(0.9); } to{ transform: scale(1); } }

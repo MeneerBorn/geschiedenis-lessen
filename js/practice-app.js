@@ -13,6 +13,7 @@
   let index = 0;
   let knownSet = new Set();
   let filterOnly = false;
+  let currentLesson = null;
 
   const stageEl = document.getElementById('flashcard-stage');
   const cardEl = document.getElementById('flashcard');
@@ -111,9 +112,23 @@
     progressDotsWrap.appendChild(JPTL.ProgressDots({ total: deck.length, current: index }));
   }
 
+  function showCelebration(message) {
+    const overlay = JPTL.el('div', { className: 'practice-celebration' });
+    const card = JPTL.el('div', { className: 'practice-celebration__card' }, [
+      JPTL.el('div', { className: 'practice-celebration__emoji', text: '🎉' }),
+      JPTL.el('div', { className: 'practice-celebration__text', text: message }),
+      JPTL.el('div', { className: 'practice-celebration__hint', text: 'Klik om verder te gaan' }),
+    ]);
+    overlay.appendChild(card);
+    overlay.addEventListener('click', () => overlay.remove());
+    document.body.appendChild(overlay);
+    setTimeout(() => overlay.remove(), 4000);
+  }
+
   function onToggleKnown() {
     const card = deck[index];
     const originalIndex = allCards.indexOf(card);
+    const wasFullyKnown = allCards.length > 0 && knownSet.size === allCards.length;
     if (knownSet.has(originalIndex)) knownSet.delete(originalIndex);
     else knownSet.add(originalIndex);
     saveKnown();
@@ -122,6 +137,10 @@
     knownBadge.style.display = isKnown ? '' : 'none';
     renderKnownToggle(isKnown);
     countEl.innerHTML = `${index + 1} / ${deck.length} &nbsp;·&nbsp; ${knownSet.size} gekend`;
+
+    if (!wasFullyKnown && knownSet.size === allCards.length && currentLesson && currentLesson.voltooidBoodschap) {
+      showCelebration(currentLesson.voltooidBoodschap);
+    }
 
     if (filterOnly && isKnown) {
       setTimeout(() => {
@@ -159,6 +178,7 @@
     const lesson = typeof KLASSEN !== 'undefined'
       ? KLASSEN.flatMap(k => k.lessen).find(l => l.id === lessonId)
       : null;
+    currentLesson = lesson;
     if (lesson) {
       titleEl.textContent = lesson.titel;
       document.title = lesson.titel + ' — oefenen';

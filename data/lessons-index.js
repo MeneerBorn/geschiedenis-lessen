@@ -36,7 +36,7 @@ const KLASSEN = [
     id: "5vwo",
     naam: "5 vwo",
     lessen: [
-      { id: "opkomst-politieke-stromingen", titel: "KA 8.2 — De opkomst van politiek-maatschappelijke stromingen: conservatisme en politiek liberalisme", beschrijving: "Conservatisme tegenover politiek liberalisme: van de Restauratie tot de grondwet van Thorbecke", kleur: "var(--tab-e)" },
+      { id: "opkomst-politieke-stromingen", titel: "KA 8.2 — De opkomst van politiek-maatschappelijke stromingen: conservatisme en politiek liberalisme", beschrijving: "Conservatisme tegenover politiek liberalisme: van de Restauratie tot de grondwet van Thorbecke", kleur: "var(--tab-e)", voltooidBoodschap: "Lekker bezig, ouwe Thorbecke-adept!" },
     ],
   },
 ];
