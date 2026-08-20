@@ -192,7 +192,7 @@
     }
 
     try {
-      const res = await fetch('practice-data/' + lessonId + '.json');
+      const res = await fetch('practice-data/' + lessonId + '.json?v=' + Date.now());
       if (!res.ok) throw new Error('not found');
       allCards = await res.json();
     } catch {
