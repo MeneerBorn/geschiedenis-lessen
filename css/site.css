@@ -1,0 +1,245 @@
+/* Chrome for the master page and practice app — not slide-canvas styles
+   (see deck.css for the deck viewer). Built on top of tokens.css + components.css. */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body{
+  background: var(--surface-page);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+a { color: var(--text-link); }
+a:hover { color: var(--text-link-hover); }
+
+/* ---- shared header ---- */
+/* No separate banner block — blends straight into the page's notebook beige. */
+.site-header{
+  position: relative;
+  background: var(--surface-page);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  text-align: center;
+}
+.site-header h1{
+  font-size: var(--text-h2);
+  font-weight: var(--weight-heavy);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-heading);
+}
+.site-header .btn-back{
+  display: none;
+  position: absolute;
+  left: var(--space-5);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-heading);
+  font-size: var(--text-h3);
+  cursor: pointer;
+  line-height: 1;
+  font-family: var(--font-sans);
+}
+.site-header .btn-back:hover{ color: var(--accent); }
+
+main{
+  max-width: 760px;
+  margin: var(--space-7) auto;
+  padding: 0 var(--space-5) var(--space-8);
+}
+
+.section-label{
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--space-5);
+}
+
+/* ---- class grid (master page, step 1) ---- */
+#class-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-4);
+}
+.class-btn{
+  /* background-color set per class in JS, cycling the same --tab-a..--tab-f
+     palette as a lesson's TabRail */
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-6) var(--space-4);
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-bold);
+  color: var(--text-heading);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-base) var(--ease-standard), box-shadow var(--duration-base) var(--ease-standard), filter var(--duration-base) var(--ease-standard);
+}
+.class-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  filter: brightness(1.06);
+}
+
+/* ---- lesson list (master page, step 2) ---- */
+#lesson-section{ display: none; }
+#lesson-list{ display: flex; flex-direction: column; gap: var(--space-4); }
+
+.lesson-card{
+  background: var(--surface-card);
+  border: 1px solid var(--stroke-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--duration-base) var(--ease-standard);
+}
+.lesson-card:hover{ border-color: var(--stroke-strong); }
+
+.lesson-card__top{
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.lesson-dot{
+  width: 13px; height: 13px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.lesson-info{ flex: 1; min-width: 0; }
+.lesson-info strong{
+  display: block;
+  font-size: var(--text-body-lg);
+  color: var(--text-heading);
+  font-weight: var(--weight-bold);
+}
+.lesson-info span{
+  display: block;
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+}
+
+.lesson-actions{ display: flex; gap: var(--space-3); flex-shrink: 0; align-self: flex-end; }
+.lesson-actions a{ text-decoration: none; }
+
+/* "Oefenen" — colored outline instead of the generic grey secondary button,
+   using the same per-lesson tab color as the dot (set via inline style) */
+.lesson-actions .btn-oefenen{
+  background: transparent;
+  border-color: currentColor;
+}
+.lesson-actions .btn-oefenen:hover{
+  background: rgba(0,0,0,0.06);
+}
+
+/* ---- practice app ---- */
+.practice-shell{
+  max-width: 640px;
+  margin: var(--space-7) auto;
+  padding: 0 var(--space-5) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.practice-toolbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.practice-toolbar .toolbar-actions{ display: flex; gap: var(--space-3); align-items: center; }
+
+.practice-filter{
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.practice-count{
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+}
+
+.flashcard-stage{
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 10;
+  perspective: 1400px;
+  cursor: pointer;
+}
+
+.flashcard{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform var(--duration-reveal) var(--ease-out);
+}
+.flashcard.is-flipped{ transform: rotateY(180deg); }
+
+.flashcard-face{
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-6);
+  background: var(--surface-card);
+  border: 1px solid var(--stroke-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-lg);
+  color: var(--text-heading);
+  line-height: var(--leading-reading);
+}
+.flashcard-face--back{
+  transform: rotateY(180deg);
+  background: var(--surface-accent);
+}
+
+.flashcard-known-badge{
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.practice-nav{
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.practice-empty{
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--text-body-sm);
+  padding: var(--space-8) 0;
+}

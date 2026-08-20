@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geschiedenis van meneer Born — les</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/deck.css" />
+</head>
+<body>
+
+<a class="deck-home-link" href="index.html">← Lessenoverzicht</a>
+
+<div class="deck-viewport">
+  <div class="deck-canvas" id="deck-canvas">
+    <div class="deck-canvas__content" id="deck-content"></div>
+    <div id="deck-overlay-slot"></div>
+    <div class="deck-tabrail-wrap" id="deck-tabrail"></div>
+  </div>
+</div>
+
+<script src="js/components.js"></script>
+<script src="js/deck-engine.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const lessonId = params.get('lesson');
+
+  if (!lessonId) {
+    document.body.innerHTML = '<p style="color:#fff;font-family:sans-serif;padding:2rem">Geen les opgegeven. Ga terug naar het <a href="index.html" style="color:#9c6">overzicht</a>.</p>';
+  } else {
+    const script = document.createElement('script');
+    script.src = `lessons/${lessonId}.js?v=${Date.now()}`;
+    script.onload = () => {
+      if (typeof LESSON_SLIDES === 'undefined' || !LESSON_SLIDES.length) {
+        document.body.innerHTML = '<p style="color:#fff;font-family:sans-serif;padding:2rem">Deze les kon niet geladen worden.</p>';
+        return;
+      }
+      DeckEngine.init({
+        slides: LESSON_SLIDES,
+        canvasEl: document.getElementById('deck-canvas'),
+        contentEl: document.getElementById('deck-content'),
+        overlaySlotEl: document.getElementById('deck-overlay-slot'),
+        tabrailEl: document.getElementById('deck-tabrail'),
+      });
+    };
+    script.onerror = () => {
+      document.body.innerHTML = `<p style="color:#fff;font-family:sans-serif;padding:2rem">Les "${lessonId}" niet gevonden. Ga terug naar het <a href="index.html" style="color:#9c6">overzicht</a>.</p>`;
+    };
+    document.head.appendChild(script);
+  }
+</script>
+</body>
+</html>

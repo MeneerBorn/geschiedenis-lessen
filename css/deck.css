@@ -1,0 +1,197 @@
+/* Slide-canvas styles for deck.html — the 1280x720 letterboxed, click-to-reveal
+   deck viewer. Structure/behavior ported from reference/LessonDeck.dc.html. */
+
+html, body{ height: 100%; }
+body{
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+
+.deck-viewport{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.deck-canvas{
+  width: 1280px;
+  height: 720px;
+  flex: none;
+  position: relative;
+  background: var(--surface-page);
+  overflow: hidden;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transform-origin: center center;
+}
+
+.deck-canvas__content{
+  position: absolute;
+  inset: 0;
+  padding: 96px 96px 96px 150px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.deck-canvas__overlay{
+  position: absolute;
+  inset: 0;
+  background: var(--surface-page);
+}
+.deck-canvas__overlay--exercise{
+  background: var(--surface-exercise);
+}
+.deck-canvas__overlay-inner{
+  position: absolute;
+  inset: 96px 96px 96px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  align-items: flex-start;
+  max-width: 1040px;
+}
+
+.deck-title-eyebrow{
+  font-family: var(--font-mono);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-semibold);
+  color: var(--text-muted);
+}
+.deck-title-block{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.deck-image-block{ display: flex; gap: 56px; align-items: center; }
+.deck-image-block__figure{ flex: 0 0 42%; }
+.deck-image-block__body{ flex: 1; display: flex; flex-direction: column; gap: 32px; }
+
+.deck-images-block{ display: flex; gap: 40px; width: 100%; max-width: 1040px; }
+.deck-images-block > div{ flex: 1; }
+
+.deck-question-block{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.deck-question-block__eyebrow{
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.deck-question-block__question{
+  font-family: var(--font-sans);
+  font-weight: var(--weight-heavy);
+  font-size: var(--text-h1);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-heading);
+  max-width: 880px;
+}
+.deck-question-block__question--compact{
+  font-size: var(--text-h2);
+  max-width: 980px;
+}
+.deck-question-block__hint{
+  font-family: var(--font-sans);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-snug);
+  color: var(--text-muted);
+  max-width: 800px;
+}
+
+.deck-quote-block{ display: flex; flex-direction: column; gap: 28px; max-width: 900px; }
+.deck-quote-block__eyebrow{
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.deck-timeline-block{ display: flex; flex-direction: column; gap: 36px; }
+.deck-timeline-block__marks{ display: flex; flex-direction: column; gap: 22px; }
+
+.deck-recap-block{ display: flex; flex-direction: column; gap: 40px; }
+
+/* ---- oddword — wider column + tighter header gap for longer lists ---- */
+.deck-oddword{ max-width: 1040px; gap: 16px; }
+
+/* ---- examenvraag — added type: a real old exam question + bron(nen) + source ---- */
+.deck-examenvraag{ max-width: 1040px; gap: 12px; }
+.deck-examenvraag__images{ display: flex; gap: 28px; width: 100%; }
+.deck-examenvraag__images > div{ flex: 1; max-width: 320px; }
+.deck-examenvraag__images .jptl-figure__frame{ aspect-ratio: 16 / 6 !important; }
+.deck-examenvraag__brontekst{
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-snug);
+  color: var(--text-body);
+  padding-left: 20px;
+  border-left: 2px solid var(--stroke-strong);
+}
+.deck-examenvraag__toelichting{
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  line-height: var(--leading-snug);
+  color: var(--text-muted);
+}
+.deck-examenvraag__question{
+  font-family: var(--font-sans);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-reading);
+  color: var(--text-body);
+}
+.deck-examenvraag__source{
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-muted);
+}
+
+/* ---- TabRail placement (mirrored to slide's left edge, per reference) ---- */
+.deck-tabrail-wrap{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+/* ---- floating "back to overview" control — chrome the reference tool
+   didn't need (single-deck), added here for multi-deck navigation.
+   Sits in the letterboxed black area outside the canvas, stopPropagation'd
+   so it never triggers slide advance. ---- */
+.deck-home-link{
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 10;
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  transition: color var(--duration-base) var(--ease-standard), background var(--duration-base) var(--ease-standard);
+}
+.deck-home-link:hover{
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}

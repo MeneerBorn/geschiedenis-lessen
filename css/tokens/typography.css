@@ -1,0 +1,27 @@
+:root {
+  /* Type scale — sized for classroom projection (16:9 slides), never below 24px on-slide. */
+  --text-eyebrow: 20px;
+  --text-caption: 18px;
+  --text-body-sm: 22px;
+  --text-body: 28px;
+  --text-body-lg: 32px;
+  --text-h3: 36px;
+  --text-h2: 48px;
+  --text-h1: 72px;
+  --text-display: 96px;
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-reading: 1.55;
+
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-eyebrow: 0.14em;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+}

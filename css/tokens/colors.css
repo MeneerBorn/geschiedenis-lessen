@@ -1,0 +1,58 @@
+:root {
+  /* ---- base palette (oklch) — warm autumnal neutrals ---- */
+  --gray-950: oklch(15% 0.018 55);
+  --gray-900: oklch(19% 0.020 55);
+  --gray-800: oklch(24% 0.022 55);
+  --gray-700: oklch(32% 0.022 55);
+  --gray-600: oklch(45% 0.020 55);
+  --gray-400: oklch(62% 0.025 65);
+  --gray-200: oklch(80% 0.020 70);
+  --gray-100: oklch(89% 0.015 70);
+  --gray-50:  oklch(97% 0.012 75);
+
+  --green-70: oklch(66% 0.115 155);
+  --green-60: oklch(58% 0.120 155);
+  --green-20: oklch(22% 0.035 155);
+
+  --wine-60: oklch(45% 0.11 25);
+  --moss-60: oklch(50% 0.07 145);
+
+  /* ---- semantic surfaces — warm notebook-paper light theme ---- */
+  --surface-page: var(--gray-50);
+  --surface-card: var(--gray-100);
+  --surface-raised: var(--gray-200);
+  --surface-sunken: oklch(84% 0.020 70);
+  --surface-accent: oklch(93% 0.035 155);
+  --surface-exercise: oklch(80% 0.14 60);
+
+  /* ---- semantic text — dark grey/black on the paper ground ---- */
+  --text-heading: var(--gray-950);
+  --text-body: var(--gray-800);
+  --text-muted: var(--gray-600);
+  --text-faint: var(--gray-400);
+  --text-on-accent: oklch(15% 0.02 155);
+  --text-link: var(--green-70);
+  --text-link-hover: var(--green-60);
+
+  /* ---- borders ---- */
+  --stroke-subtle: var(--gray-200);
+  --stroke-strong: var(--gray-400);
+  --stroke-accent: var(--green-70);
+
+  /* ---- accent ---- */
+  --accent: var(--green-70);
+  --accent-hover: var(--green-60);
+  --accent-press: oklch(52% 0.125 155);
+
+  /* ---- tab-rail palette (distinct per-tab colors — vivid, meant to pop) ---- */
+  --tab-a: oklch(62% 0.19 35);
+  --tab-b: oklch(75% 0.17 85);
+  --tab-c: oklch(62% 0.16 145);
+  --tab-d: oklch(62% 0.15 200);
+  --tab-e: oklch(60% 0.20 340);
+  --tab-f: oklch(52% 0.18 25);
+
+  /* ---- rare semantic (era markers only, use sparingly) ---- */
+  --marker-war: var(--wine-60);
+  --marker-peace: var(--moss-60);
+}

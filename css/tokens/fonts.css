@@ -1,0 +1,9 @@
+/* Webfonts — Google Fonts CDN import (no source font files were provided).
+   Libre Baskerville = a text-book reading serif for display/heading/body. IBM Plex Mono = dates, labels, eyebrows.
+   Substitution: flagged in readme.md — ask the user for real brand font files if they exist. */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geschiedenis van meneer Born — oefenen</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <a class="btn-back" style="display:flex" href="index.html" title="Terug naar overzicht">‹</a>
+  <h1 id="lesson-title">Oefenen</h1>
+  <p id="lesson-sub">Herhaal wat je hebt geleerd</p>
+</header>
+
+<div class="practice-shell">
+  <div class="practice-toolbar">
+    <div class="toolbar-actions" id="toolbar-actions"></div>
+    <span class="practice-count" id="practice-count">–</span>
+  </div>
+
+  <div id="progress-dots-wrap"></div>
+
+  <div class="flashcard-stage" id="flashcard-stage">
+    <div class="flashcard" id="flashcard">
+      <div class="flashcard-face">
+        <div>
+          <div class="jptl-slidehdr__eyebrow" style="margin-bottom:16px">Vraag</div>
+          <p id="question-text"></p>
+        </div>
+      </div>
+      <div class="flashcard-face flashcard-face--back">
+        <span class="flashcard-known-badge" id="known-badge" style="display:none">✓ gekend</span>
+        <div>
+          <div class="jptl-slidehdr__eyebrow" style="margin-bottom:16px">Antwoord</div>
+          <p id="answer-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="known-toggle-wrap"></div>
+
+  <div class="practice-nav" id="practice-nav"></div>
+
+  <div class="practice-empty" id="practice-empty" style="display:none">
+    <p>Alle kaarten gekend! Zet de filter uit om opnieuw te oefenen.</p>
+  </div>
+</div>
+
+<script src="data/lessons-index.js"></script>
+<script src="js/components.js"></script>
+<script src="js/practice-app.js"></script>
+</body>
+</html>

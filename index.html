@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geschiedenis van meneer Born</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <button id="btn-back" class="btn-back" onclick="showClassPicker()" title="Terug">‹</button>
+  <h1>Geschiedenis van meneer Born</h1>
+</header>
+
+<main>
+  <!-- Step 1: class picker -->
+  <section id="class-section">
+    <p class="section-label">Kies jouw klas</p>
+    <div id="class-grid"></div>
+  </section>
+
+  <!-- Step 2: lesson list -->
+  <section id="lesson-section">
+    <p class="section-label" id="lesson-label">Lessen</p>
+    <div id="lesson-list"></div>
+  </section>
+</main>
+
+<script src="data/lessons-index.js"></script>
+<script>
+  const classGrid    = document.getElementById('class-grid');
+  const classSection = document.getElementById('class-section');
+  const lessonSection = document.getElementById('lesson-section');
+  const lessonList   = document.getElementById('lesson-list');
+  const lessonLabel  = document.getElementById('lesson-label');
+  const btnBack      = document.getElementById('btn-back');
+
+  // Same 6-hue palette as a lesson's TabRail
+  const TAB_COLORS = ['var(--tab-a)', 'var(--tab-b)', 'var(--tab-c)', 'var(--tab-d)', 'var(--tab-e)', 'var(--tab-f)'];
+
+  KLASSEN.forEach((klas, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'class-btn';
+    btn.style.background = TAB_COLORS[i % TAB_COLORS.length];
+    btn.textContent = klas.naam;
+    btn.addEventListener('click', () => showLessons(klas));
+    classGrid.appendChild(btn);
+  });
+
+  function showClassPicker() {
+    classSection.style.display = 'block';
+    lessonSection.style.display = 'none';
+    btnBack.style.display = 'none';
+  }
+
+  function showLessons(klas) {
+    classSection.style.display = 'none';
+    lessonSection.style.display = 'block';
+    btnBack.style.display = 'block';
+    lessonLabel.textContent = klas.naam;
+    lessonList.innerHTML = '';
+
+    for (const les of klas.lessen) {
+      const card = document.createElement('div');
+      card.className = 'lesson-card';
+      card.style.background = `color-mix(in oklch, ${les.kleur || 'var(--accent)'} 20%, var(--surface-page))`;
+      card.innerHTML = `
+        <span class="lesson-card__top">
+          <span class="lesson-dot" style="background:${les.kleur || 'var(--accent)'}"></span>
+          <span class="lesson-info">
+            <strong>${les.titel}</strong>
+            <span>${les.beschrijving}</span>
+          </span>
+        </span>
+        <span class="lesson-actions">
+          <a class="jptl-btn jptl-btn--primary jptl-btn--small" href="deck.html?lesson=${encodeURIComponent(les.id)}">Bekijk les</a>
+          <a class="jptl-btn jptl-btn--secondary jptl-btn--small btn-oefenen" style="color:${les.kleur || 'var(--accent)'}" href="practice.html?lesson=${encodeURIComponent(les.id)}">Oefen de stof</a>
+        </span>
+      `;
+      lessonList.appendChild(card);
+    }
+  }
+</script>
+</body>
+</html>
