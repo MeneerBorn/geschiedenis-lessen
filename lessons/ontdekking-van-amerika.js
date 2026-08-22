@@ -19,12 +19,12 @@ const LESSON_SLIDES = [
     type: 'startopdracht',
     bg: 'page',
     instruction: 'Schrijf over en vul aan. Gebruik de volgende woorden:',
-    words: ['goud', 'Christendom', 'factorijen', 'specerijen'],
+    words: ['15e', 'goud', 'Christendom', 'Ghana', 'Azië', 'factorijen', 'specerijen'],
+    wordsSuffix: '(verzin één woord zelf)',
     paragraphs: [
-      'De Portugezen gingen in de 15e eeuw op zoek naar …… en zilver.',
-      'Ook wilden ze het …… verspreiden onder andere volken.',
-      'In Afrika en Azië bouwden ze ……: handelsposten met kanonnen en een muur.',
-      'Ze handelden onder andere in ……, zoals peper en kaneel.',
+      'De Portugese ontdekkingsreizen begonnen eind …… eeuw: op zoek naar …… en zilver, en om het …… te verspreiden.',
+      'Rond 1450 ontdekten ze de \'goudkust\' in ……, en voeren vandaar om Afrika heen naar ……',
+      'Onderweg stichtten ze ……: handelsposten voor de handel in …… zoals peper en kaneel — maar niet altijd eerlijk, want soms gingen ze ook over tot ……',
     ],
   },
   {

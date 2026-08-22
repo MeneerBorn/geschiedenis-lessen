@@ -82,7 +82,7 @@ const JPTL = (() => {
     return figure;
   }
 
-  function FillInBlanks({ heading = 'Startopdracht', instruction, words = [], paragraphs = [] } = {}) {
+  function FillInBlanks({ heading = 'Startopdracht', instruction, words = [], wordsSuffix, paragraphs = [] } = {}) {
     const wrap = el('div', { className: 'jptl-fill' });
     wrap.appendChild(el('h2', { className: 'jptl-fill__heading', text: heading }));
     const body = el('div', { className: 'jptl-fill__body' });
@@ -92,6 +92,7 @@ const JPTL = (() => {
       words.forEach((w, i) => {
         p.appendChild(el('strong', {}, w + (i < words.length - 1 ? ', ' : '')));
       });
+      if (wordsSuffix) p.appendChild(document.createTextNode(' ' + wordsSuffix));
       body.appendChild(p);
     }
     const paraWrap = el('div', { className: 'jptl-fill__paragraphs' });

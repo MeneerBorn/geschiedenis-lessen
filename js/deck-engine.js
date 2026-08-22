@@ -156,7 +156,7 @@ const DeckEngine = (() => {
       const overlay = JPTL.el('div', {
         className: ['deck-canvas__overlay', isPage ? '' : 'deck-canvas__overlay--exercise'].join(' ').trim(),
       });
-      const fill = JPTL.FillInBlanks({ instruction: slide.instruction, words: slide.words, paragraphs: slide.paragraphs });
+      const fill = JPTL.FillInBlanks({ instruction: slide.instruction, words: slide.words, wordsSuffix: slide.wordsSuffix, paragraphs: slide.paragraphs });
       fill.style.position = 'absolute';
       fill.style.inset = '96px 96px 96px 150px';
       // FillInBlanks' own class sets width/height:100%, which otherwise wins
