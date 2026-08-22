@@ -51,11 +51,6 @@ const LESSON_SLIDES = [
     ],
   },
   {
-    type: 'images',
-    image1Caption: 'Columbus komt aan in Amerika, 1492 — sleep hier je eigen afbeelding in',
-    image2Caption: 'Suikerplantage in het Portugese Brazilië — sleep hier je eigen afbeelding in',
-  },
-  {
     type: 'content',
     title: 'Vragen',
     size: 'loose',
