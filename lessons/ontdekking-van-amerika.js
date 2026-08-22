@@ -19,12 +19,10 @@ const LESSON_SLIDES = [
     type: 'startopdracht',
     bg: 'page',
     instruction: 'Schrijf over en vul aan. Gebruik de volgende woorden:',
-    words: ['15e', 'goud', 'Christendom', 'Ghana', 'Azië', 'factorijen', 'specerijen'],
-    wordsSuffix: '(verzin één woord zelf)',
+    words: ['15e', 'winst', 'Christendom', 'Ghana', 'Azië'],
     paragraphs: [
-      'De Portugese ontdekkingsreizen begonnen eind …… eeuw: op zoek naar …… en zilver, en om het …… te verspreiden.',
+      'De Portugese ontdekkingsreizen begonnen eind …… eeuw, gedreven door de zoektocht naar …… en de wens om het …… te verspreiden.',
       'Rond 1450 ontdekten ze de \'goudkust\' in ……, en voeren vandaar om Afrika heen naar ……',
-      'Onderweg stichtten ze ……: handelsposten voor de handel in …… zoals peper en kaneel — maar niet altijd eerlijk, want soms gingen ze ook over tot ……',
     ],
   },
   {
