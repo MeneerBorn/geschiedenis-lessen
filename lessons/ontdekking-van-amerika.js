@@ -64,7 +64,7 @@ const LESSON_SLIDES = [
     type: 'question',
     eyebrow: 'Hoofdvraag',
     size: 'compact',
-    question: "Waarom wordt Columbus' aankomst in Amerika een 'ontdekking' genoemd, en wat waren de gevolgen daarvan voor Europa en voor de inheemse bevolking van Amerika?",
+    question: "Hoe droeg Columbus' vergissing over zijn bestemming bij aan de kolonisatie van Amerika door Spanje en Portugal?",
   },
   {
     // Elke regel: twee begrippen die direct bij elkaar horen + één begrip uit
