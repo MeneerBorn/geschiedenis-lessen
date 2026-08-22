@@ -24,6 +24,7 @@ const KLASSEN = [
     naam: "4 havo",
     lessen: [
       { id: "begin-europese-expansie", titel: "2.1 — Hoe begon de Europese expansie overzee?", beschrijving: "KA: Het begin van de Europese overzeese expansie", kleur: "var(--tab-b)" },
+      { id: "ontdekking-van-amerika", titel: "2.2 — Hoe 'ontdekten' Europese landen Amerika?", beschrijving: "KA: Het begin van de Europese overzeese expansie", kleur: "var(--tab-b)" },
     ],
   },
   {
