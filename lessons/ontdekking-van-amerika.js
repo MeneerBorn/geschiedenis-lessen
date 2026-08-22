@@ -54,10 +54,10 @@ const LESSON_SLIDES = [
     title: 'Vragen',
     size: 'loose',
     items: [
-      '1. Leg uit waarom Columbus dacht dat hij in Azië was aangekomen, en wat dit zegt over de kennis van de wereld in die tijd.',
-      '2. Vergelijk de motieven van Columbus met die van de Portugese ontdekkingsreizigers uit de vorige les: wat hadden ze gemeen, en waarin verschilden ze?',
-      '3. Leg uit welk verband er bestaat tussen de aanwezigheid van zilver in Zuid-Amerika en het ontstaan van suikerplantages in Brazilië.',
-      '4. Was het voor de inheemse bevolking van Amerika toeval dat Europese landen hun gebied gingen koloniseren, of was dit onvermijdelijk zodra Columbus voet aan wal zette? Onderbouw je antwoord.',
+      '1. Leg uit waarom Columbus dacht dat hij in Azië was aangekomen, terwijl hij in werkelijkheid in Amerika was.',
+      '2. Leg uit hoe Columbus\' zoektocht naar een route naar Azië uiteindelijk leidde tot de kolonisatie van Amerika door Spanje en Portugal.',
+      '3. Leg uit welk verband er bestaat tussen de ontdekking van zilver in Zuid-Amerika en de kolonisatie van dat gebied door Spanje.',
+      '4. Leg uit waarom 1492 vaak wordt gezien als een keerpunt in de wereldgeschiedenis.',
     ],
   },
   {
