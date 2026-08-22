@@ -19,11 +19,11 @@ const LESSON_SLIDES = [
     type: 'startopdracht',
     bg: 'page',
     instruction: 'Schrijf over en vul aan. Gebruik de volgende woorden:',
-    words: ['15e', 'winst', 'Christendom', 'Ghana', 'Azië', 'factorijen'],
+    words: ['15e', 'goud en zilver', 'Christendom', 'Ghana', 'Azië', 'factorijen', 'specerijen'],
     paragraphs: [
-      'De Portugese ontdekkingsreizen begonnen eind …… eeuw, gedreven door de zoektocht naar …… en de wens om het …… te verspreiden.',
-      'Rond 1450 ontdekten ze de \'goudkust\' in ……, en voeren vandaar om Afrika heen naar ……',
-      'Onderweg stichtten ze ……: handelsposten met kanonnen en een muur.',
+      'In de …… eeuw voeren de Portugezen langs Afrika naar Azië, op zoek naar ……, en om het …… te verspreiden.',
+      'Rond 1450 bereikten ze de \'goudkust\' in ……, en voeren vandaar verder om Afrika heen naar ……',
+      'Onderweg bouwden ze ……: handelsposten voor de handel in …… zoals peper en kaneel.',
     ],
   },
   {
