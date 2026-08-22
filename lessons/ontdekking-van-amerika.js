@@ -1,14 +1,18 @@
-// KA 2.2 — Hoe 'ontdekten' Europese landen Amerika? — 4 havo
+// KA 2.1 — Hoe 'ontdekten' Europese landen Amerika? — 4 havo
 // Bron: JPT-4H (Google Drive), nieuwe slide over Columbus en de kolonisatie
-// van Zuid-Amerika. Zelfde Kenmerkend Aspect als paragraaf 2.1 (het begin van
-// de Europese overzeese expansie), nu vanuit de Spaanse/Amerikaanse kant.
+// van Zuid-Amerika. Zelfde paragraaf/Kenmerkend Aspect als de bestaande
+// "begin-europese-expansie" les (het begin van de Europese overzeese
+// expansie) — geen nieuwe eigen "Paragraaf x.x"-dividerslide in de bron, dus
+// nog steeds paragraaf 2.1, nu vanuit de Spaanse/Amerikaanse kant. Op
+// verzoek een apart lesbestand/kaartje gehouden (twee lesuren), niet
+// samengevoegd met de bestaande 2.1-les.
 // "Maken"-slide op standaard verzoek weggelaten.
-// Startopdracht recapt paragraaf 2.1 (de Portugese ontdekkingsreizen), omdat
-// die les zonder startopdracht is gebouwd.
+// Startopdracht recapt de Portugese ontdekkingsreizen uit de andere 2.1-les,
+// omdat die les zonder startopdracht is gebouwd.
 const LESSON_SLIDES = [
   {
     type: 'title',
-    eyebrow: 'Paragraaf 2.2',
+    eyebrow: 'Paragraaf 2.1',
     title: 'KA: Het begin van de Europese overzeese expansie',
   },
   {
