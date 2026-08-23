@@ -11,10 +11,13 @@
 // omdat die les zonder startopdracht is gebouwd.
 // Volgorde op verzoek aangepast (2026-08-23) tot een "advance organizer"-
 // opzet: eerst de Startopdracht (activeert voorkennis), dan pas titel/KA,
-// dan meteen de Hoofdvraag (zodat leerlingen die vraag in gedachten houden
-// tijdens de rest van de les) — pas daarna de content-slides zoals gewoonlijk.
-// De Hoofdvraag-slide is verplaatst, niet gedupliceerd: hij komt nu maar op
-// één plek voor (aan het begin), niet nogmaals aan het eind.
+// dan meteen de eerste content-slide — maar die start "collapsed"
+// (startCollapsed: true) zodat alleen de titel/les-vraag ("Hoe 'ontdekten'
+// Europese landen Amerika?") in beeld komt, en zelfs de eerste regel
+// ("Columbus vaart naar het westen") pas op de eerste klik verschijnt.
+// Let op: dit is NIET de Hoofdvraag — die blijft een apart, dieper
+// synthesevraagje en staat zoals gebruikelijk verderop (na Vragen, voor
+// oddword), ongewijzigd qua inhoud en positie.
 const LESSON_SLIDES = [
   {
     type: 'startopdracht',
@@ -33,15 +36,10 @@ const LESSON_SLIDES = [
     title: 'KA: Het begin van de Europese overzeese expansie',
   },
   {
-    type: 'question',
-    eyebrow: 'Hoofdvraag',
-    size: 'compact',
-    question: "Hoe droeg Columbus' vergissing over zijn bestemming bij aan de kolonisatie van Amerika door Spanje en Portugal?",
-  },
-  {
     type: 'content',
     title: "Hoe 'ontdekten' Europese landen Amerika?",
     size: 'medium',
+    startCollapsed: true,
     items: [
       { text: 'Columbus vaart naar het westen (1492)', kind: 'header' },
       'In 1492 vaart Columbus, in opdracht van de Spaanse koning, naar het westen',
@@ -71,6 +69,12 @@ const LESSON_SLIDES = [
       '3. Leg uit welk verband er bestaat tussen de ontdekking van zilver in Zuid-Amerika en de kolonisatie van dat gebied door Spanje.',
       '4. Leg uit waarom 1492 vaak wordt gezien als een keerpunt in de wereldgeschiedenis.',
     ],
+  },
+  {
+    type: 'question',
+    eyebrow: 'Hoofdvraag',
+    size: 'compact',
+    question: "Hoe droeg Columbus' vergissing over zijn bestemming bij aan de kolonisatie van Amerika door Spanje en Portugal?",
   },
   {
     // Elke regel: twee begrippen die direct bij elkaar horen + één begrip uit

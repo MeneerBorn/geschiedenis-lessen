@@ -173,8 +173,12 @@ const DeckEngine = (() => {
     return type === 'content' || type === 'oddword' || type === 'startopdracht' || type === 'examenvraag';
   }
 
+  function startStep(slide) {
+    return slide.startCollapsed ? 0 : 1;
+  }
+
   function init({ slides, canvasEl, contentEl, overlaySlotEl, tabrailEl, startIndex = 0 }) {
-    const state = { slideIndex: startIndex, step: 1, scale: 1 };
+    const state = { slideIndex: startIndex, step: startStep(slides[startIndex]), scale: 1 };
 
     function render() {
       const slide = slides[state.slideIndex];
@@ -201,7 +205,7 @@ const DeckEngine = (() => {
         state.step += 1;
       } else if (state.slideIndex < slides.length - 1) {
         state.slideIndex += 1;
-        state.step = 1;
+        state.step = startStep(slides[state.slideIndex]);
       }
       render();
     }
@@ -218,13 +222,13 @@ const DeckEngine = (() => {
 
     function goTo(index) {
       state.slideIndex = index;
-      state.step = 1;
+      state.step = startStep(slides[index]);
       render();
     }
 
     function restart() {
       state.slideIndex = 0;
-      state.step = 1;
+      state.step = startStep(slides[0]);
       render();
     }
     window.__deckRestart = restart;
