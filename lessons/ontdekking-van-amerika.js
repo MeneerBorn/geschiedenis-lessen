@@ -9,12 +9,13 @@
 // "Maken"-slide op standaard verzoek weggelaten.
 // Startopdracht recapt de Portugese ontdekkingsreizen uit de andere 2.1-les,
 // omdat die les zonder startopdracht is gebouwd.
+// Volgorde op verzoek aangepast (2026-08-23) tot een "advance organizer"-
+// opzet: eerst de Startopdracht (activeert voorkennis), dan pas titel/KA,
+// dan meteen de Hoofdvraag (zodat leerlingen die vraag in gedachten houden
+// tijdens de rest van de les) — pas daarna de content-slides zoals gewoonlijk.
+// De Hoofdvraag-slide is verplaatst, niet gedupliceerd: hij komt nu maar op
+// één plek voor (aan het begin), niet nogmaals aan het eind.
 const LESSON_SLIDES = [
-  {
-    type: 'title',
-    eyebrow: 'Paragraaf 2.1',
-    title: 'KA: Het begin van de Europese overzeese expansie',
-  },
   {
     type: 'startopdracht',
     bg: 'page',
@@ -25,6 +26,17 @@ const LESSON_SLIDES = [
       'Rond 1450 bereikten ze de \'goudkust\' in ……, en voeren vandaar verder om Afrika heen naar ……',
       'Onderweg bouwden ze ……: handelsposten voor de handel in …… zoals peper en kaneel.',
     ],
+  },
+  {
+    type: 'title',
+    eyebrow: 'Paragraaf 2.1',
+    title: 'KA: Het begin van de Europese overzeese expansie',
+  },
+  {
+    type: 'question',
+    eyebrow: 'Hoofdvraag',
+    size: 'compact',
+    question: "Hoe droeg Columbus' vergissing over zijn bestemming bij aan de kolonisatie van Amerika door Spanje en Portugal?",
   },
   {
     type: 'content',
@@ -59,12 +71,6 @@ const LESSON_SLIDES = [
       '3. Leg uit welk verband er bestaat tussen de ontdekking van zilver in Zuid-Amerika en de kolonisatie van dat gebied door Spanje.',
       '4. Leg uit waarom 1492 vaak wordt gezien als een keerpunt in de wereldgeschiedenis.',
     ],
-  },
-  {
-    type: 'question',
-    eyebrow: 'Hoofdvraag',
-    size: 'compact',
-    question: "Hoe droeg Columbus' vergissing over zijn bestemming bij aan de kolonisatie van Amerika door Spanje en Portugal?",
   },
   {
     // Elke regel: twee begrippen die direct bij elkaar horen + één begrip uit
