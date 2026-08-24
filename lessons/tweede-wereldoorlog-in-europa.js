@@ -22,11 +22,11 @@ const LESSON_SLIDES = [
     type: 'startopdracht',
     bg: 'page',
     instruction: 'Schrijf over en vul aan. Gebruik de volgende woorden:',
-    words: ['1935', 'Rijnland', 'Anschluss', 'appeasement', 'München', 'Sudetenland', 'Polen'],
+    words: ['1935', 'Rijnland', 'Anschluss', 'appeasement', 'München', 'Sudetenland', 'Polen', 'Tweede Wereldoorlog'],
     paragraphs: [
       'Vanaf …… schond Hitler het verdrag van Versailles: hij bouwde een leger op, bezette het ……, en voegde in 1938 Oostenrijk bij Duitsland (de ……).',
       'Groot-Brittannië en Frankrijk kozen voor ……, en lieten Hitler op de Conferentie van …… het …… van Tsjecho-Slowakije innemen.',
-      'Toch bezette hij in 1939 het hele land, en viel op 1 september …… binnen, waarna zij overgingen tot ……',
+      'Toch bezette hij in 1939 het hele land, en viel op 1 september …… binnen, waarna de …… officieel uitbrak.',
     ],
   },
   {
@@ -45,7 +45,7 @@ const LESSON_SLIDES = [
       'Maar Groot-Brittannië won de **Battle of Britain** en hield stand',
       '**Battle of Britain**: de strijd in de lucht boven Groot-Brittannië',
       'In 1941 viel Hitler de Sovjet-Unie aan',
-      'Daarmee verbrak hij het niet-aanvalsverdrag dat hij in 1939 met Stalin had gesloten',
+      'Daarmee verbrak hij het **niet-aanvalsverdrag** dat hij in 1939 met Stalin had gesloten',
     ],
   },
   {
