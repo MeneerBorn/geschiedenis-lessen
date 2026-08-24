@@ -53,8 +53,10 @@ const LESSON_SLIDES = [
     title: 'Vragen',
     size: 'loose',
     items: [
-      '1. Leg uit welke landen Duitsland in 1940 veroverde, en welk land als enige stand hield.',
+      '1. Leg uit wat de Battle of Britain was, en waarom het winnen daarvan belangrijk was voor Groot-Brittannië.',
       '2. Leg uit wat het niet-aanvalsverdrag tussen Duitsland en de Sovjet-Unie inhield, en wat Hitler daarmee deed in 1941.',
+      '3. Leg uit het verschil tussen wat er in 1940 gebeurde met West-Europa en wat er gebeurde met Groot-Brittannië.',
+      '4. Leg uit waarom je zou kunnen zeggen dat Duitsland in 1940 en 1941 steeds meer landen als vijand kreeg.',
     ],
   },
   {
