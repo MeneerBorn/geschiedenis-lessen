@@ -32,7 +32,7 @@ const LESSON_SLIDES = [
   },
   {
     type: 'content',
-    title: 'Wat waren het socialisme en het confessionalisme?',
+    title: 'Wat was het socialisme in de 19e eeuw?',
     size: 'medium',
     startCollapsed: true,
     items: [
@@ -46,7 +46,7 @@ const LESSON_SLIDES = [
   },
   {
     type: 'content',
-    title: 'Wat waren het socialisme en het confessionalisme?',
+    title: 'Wat was het confessionalisme in de 19e eeuw?',
     size: 'medium',
     items: [
       { text: 'Confessionalisme', kind: 'header' },
