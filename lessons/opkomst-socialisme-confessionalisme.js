@@ -36,7 +36,6 @@ const LESSON_SLIDES = [
     size: 'medium',
     startCollapsed: true,
     items: [
-      { text: 'Socialisme', kind: 'header' },
       'Kwam voort uit de industriële revolutie',
       'Socialisten wilden de levens van arbeiders verbeteren',
       'Al snel ontstonden er meerdere soorten socialisme',
@@ -49,7 +48,6 @@ const LESSON_SLIDES = [
     title: 'Wat was het confessionalisme in de 19e eeuw?',
     size: 'medium',
     items: [
-      { text: 'Confessionalisme', kind: 'header' },
       'Een politieke stroming gebaseerd op het christelijk geloof',
       'In de nieuwe grondwet van minister Thorbecke (1848) kwam het recht op bijzonder onderwijs',
       'Dat betekende dat je een katholieke of protestantse school mocht oprichten',
