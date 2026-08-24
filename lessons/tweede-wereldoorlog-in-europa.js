@@ -40,10 +40,12 @@ const LESSON_SLIDES = [
     size: 'medium',
     startCollapsed: true,
     items: [
-      { text: 'De Duitse opmars in Europa', kind: 'header' },
+      { text: 'Na Polen wilde Hitler de rest van Europa', kind: 'header' },
       'In 1940 veroverde het Duitse leger bijna heel West-Europa: Denemarken, Noorwegen, Nederland, België en Frankrijk',
-      'Alleen Groot-Brittannië hield in de zomer van 1940 stand',
-      'In 1941 viel Hitler de Sovjet-Unie aan, en verbrak daarmee het niet-aanvalsverdrag dat hij in 1939 met Stalin had gesloten',
+      'Maar Groot-Brittannië won de **Battle of Britain** en hield stand',
+      '**Battle of Britain**: de strijd in de lucht boven Groot-Brittannië',
+      'In 1941 viel Hitler de Sovjet-Unie aan',
+      'Daarmee verbrak hij het niet-aanvalsverdrag dat hij in 1939 met Stalin had gesloten',
     ],
   },
   {
