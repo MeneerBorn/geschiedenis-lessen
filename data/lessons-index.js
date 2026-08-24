@@ -34,6 +34,7 @@ const KLASSEN = [
       { id: "duitsland-na-wo1", titel: "HC Duitsland 1.1 — Duitsland na de Eerste Wereldoorlog", beschrijving: "Van de Republiek van Weimar tot de beurskrach van 1929", kleur: "var(--tab-c)" },
       { id: "opkomst-nationaalsocialisme", titel: "HC Duitsland 1.1 — De opkomst van het nationaalsocialisme", beschrijving: "Waarom werd het nationaalsocialisme populair in Duitsland?", kleur: "var(--tab-c)" },
       { id: "begin-tweede-wereldoorlog", titel: "8.1 — Hoe begon de Tweede Wereldoorlog?", beschrijving: "KA: Het voeren van twee wereldoorlogen", kleur: "var(--tab-c)" },
+      { id: "tweede-wereldoorlog-in-europa", titel: "8.1 — Hoe verliep de Tweede Wereldoorlog in Europa?", beschrijving: "KA: Het voeren van twee wereldoorlogen", kleur: "var(--tab-c)" },
     ],
   },
   {
