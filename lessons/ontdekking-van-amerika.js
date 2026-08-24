@@ -74,7 +74,7 @@ const LESSON_SLIDES = [
     type: 'question',
     eyebrow: 'Hoofdvraag',
     size: 'compact',
-    question: "Hoe droeg Columbus' vergissing over zijn bestemming bij aan de kolonisatie van Amerika door Spanje en Portugal?",
+    question: 'Leg uit hoe Spanje en Portugal grote delen van Zuid-Amerika koloniseerden.',
   },
   {
     // Elke regel: twee begrippen die direct bij elkaar horen + één begrip uit
