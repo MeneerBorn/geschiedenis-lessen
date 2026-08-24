@@ -11,14 +11,8 @@
 // Hoofdvraag was in de bron nog "Yet to be determined" — hieronder zelf
 // ingevuld, reproductie + lichte koppeling, geen Big Six-behandeling
 // gevraagd deze keer.
-// Extra, eenmalige opdracht aan het eind van de les (op verzoek): een
-// sorteeropdracht (conservatisme/politiek liberalisme/kan allebei) uit de
-// bron. De bron geeft alleen de ongesorteerde begrippen, geen antwoordsleutel
-// (kolomindeling is visuele info die verloren gaat bij tekst-extractie) — de
-// sortering hieronder is zelf bepaald en door de gebruiker goedgekeurd:
-// conservatisme (hertogen, koningen, restauratie), politiek liberalisme
-// (revolutie, burgers, fabriekseigenaren, democratie, Thorbecke), kan
-// allebei (arbeiders, oorlog, feminisme — expliciet als "ambigu" behandeld).
+// De bron bevatte ook een eenmalige sorteeropdracht (conservatisme/politiek
+// liberalisme/kan allebei) — op verzoek weer verwijderd, niet gebruikt.
 const LESSON_SLIDES = [
   {
     type: 'startopdracht',
@@ -28,7 +22,7 @@ const LESSON_SLIDES = [
     wordsSuffix: '(verzin er één zelf)',
     paragraphs: [
       'Na de val van …… begon in West-Europa de ……. Gedurende deze periode wilden sommige mensen terug naar de tijd van vóór de ……. Deze mensen geloofden in het …….',
-      'Tegelijkertijd was er ook het ……: een politieke stroming die juist blij was met de ……. Politiek liberalen wilden dat …… meer …… kregen in de politiek. Een belangrijke liberale politicus was …….',
+      'Tegelijkertijd was er ook het ……: een politieke stroming die juist blij was met de ……. Politiek liberalen wilden dat …… meer …… kregen in de politiek. Een belangrijke liberale politicus was ……: deze politicus schreef in 1848 een nieuwe grondwet die de macht van de koning beperkte en burgers meer rechten gaf.',
     ],
   },
   {
@@ -38,7 +32,7 @@ const LESSON_SLIDES = [
   },
   {
     type: 'content',
-    title: 'Socialisme en confessionalisme',
+    title: 'Wat waren het socialisme en het confessionalisme?',
     size: 'medium',
     startCollapsed: true,
     items: [
@@ -52,7 +46,7 @@ const LESSON_SLIDES = [
   },
   {
     type: 'content',
-    title: 'Socialisme en confessionalisme',
+    title: 'Wat waren het socialisme en het confessionalisme?',
     size: 'medium',
     items: [
       { text: 'Confessionalisme', kind: 'header' },
@@ -93,32 +87,6 @@ const LESSON_SLIDES = [
       '6. Bijzonder onderwijs — Katholieke of protestantse school — Burgers',
       '7. Verzuiling — Katholieken en socialisten — Politiek liberalisme',
       '8. Communisme — Arbeiders grijpen de macht — Democratie',
-    ],
-  },
-  {
-    // Eenmalige extra opdracht (op verzoek) — sorteeropdracht uit de bron,
-    // niet de standaard startopdracht-format. Vraag-slide: ongesorteerd.
-    type: 'content',
-    title: 'Nog even herhalen: conservatisme of politiek liberalisme?',
-    size: 'medium',
-    items: [
-      { text: 'Zet de begrippen in de juiste kolom', kind: 'header' },
-      'Kolommen: Conservatisme — Politiek liberalisme — Kan allebei',
-      'Revolutie, burgers, hertogen, fabriekseigenaren, arbeiders, oorlog, koningen, restauratie, democratie, minister Thorbecke, feminisme',
-    ],
-  },
-  {
-    // Antwoord-slide bij de sorteeropdracht hierboven.
-    type: 'content',
-    title: 'Nog even herhalen: conservatisme of politiek liberalisme? (antwoorden)',
-    size: 'medium',
-    items: [
-      { text: 'Conservatisme', kind: 'header' },
-      'Hertogen — Koningen — Restauratie',
-      { text: 'Politiek liberalisme', kind: 'header' },
-      'Revolutie — Burgers — Fabriekseigenaren — Democratie — Minister Thorbecke',
-      { text: 'Kan allebei', kind: 'header' },
-      'Arbeiders — Oorlog — Feminisme',
     ],
   },
 ];

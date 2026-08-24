@@ -42,7 +42,7 @@ const KLASSEN = [
     naam: "5 vwo",
     lessen: [
       { id: "opkomst-politieke-stromingen", titel: "8.2 — Conservatisme en politiek liberalisme", beschrijving: "KA: De opkomst van politiek-maatschappelijke stromingen: conservatisme en politiek liberalisme", kleur: "var(--tab-e)", voltooidBoodschap: "Lekker bezig, ouwe Thorbecke-adept!" },
-      { id: "opkomst-socialisme-confessionalisme", titel: "5.3 — Socialisme en confessionalisme", beschrijving: "KA: De opkomst van politiek-maatschappelijke stromingen: socialisme en confessionalisme", kleur: "var(--tab-e)" },
+      { id: "opkomst-socialisme-confessionalisme", titel: "5.3 — Wat waren het socialisme en het confessionalisme?", beschrijving: "KA: De opkomst van politiek-maatschappelijke stromingen: socialisme en confessionalisme", kleur: "var(--tab-e)" },
     ],
   },
 ];
